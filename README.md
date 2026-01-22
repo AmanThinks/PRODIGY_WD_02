@@ -27,7 +27,9 @@ Developed a fully functional stopwatch web application with start, pause, reset,
 
 ## 🔹 Author
 Aman Gupta
+<br>
 LinkedIn:-https://www.linkedin.com/in/aman-gupta-9553073a2
+<br>
 GitHub:-https://github.com/AmanThinks
 
 ---
