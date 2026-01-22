@@ -1,0 +1,203 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.stopwatch {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 40px;
+  border-radius: 25px;
+  width: 420px;
+  text-align: center;
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.25);
+  animation: fadeIn 1s ease;
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.author-name {
+  position: fixed;
+  top: 20px;
+  right: 25px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  background: linear-gradient(
+    90deg,
+    #00eaff,
+    #00ff9d,
+    #ffffff,
+    #00eaff
+  );
+  background-size: 200% auto;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  animation: shine2D 3s linear infinite;
+  z-index: 1000;
+}
+
+
+
+@keyframes shine2D {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+
+
+.stopwatch h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #00eaff, #00ff9d, #ffffff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  animation: titleGlow 3s infinite alternate;
+}
+
+
+@keyframes titleGlow {
+  from {
+    text-shadow: 0 0 10px #00eaff;
+  }
+  to {
+    text-shadow: 0 0 25px #00ff9d;
+  }
+}
+
+
+
+/* Time Display */
+#display {
+  font-size: 3.4rem;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 20px #00eaff;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #00eaff;
+  }
+  to {
+    box-shadow: 0 0 25px #00eaff;
+  }
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons button {
+  flex: 1 1 45%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(45deg, #00eaff, #00ff9d);
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 234, 255, 0.6);
+}
+
+.buttons button:active {
+  transform: scale(0.95);
+}
+
+/* Laps */
+#laps {
+  margin-top: 20px;
+  max-height: 150px;
+  overflow-y: auto;
+  list-style: none;
+  color: #fff;
+}
+
+#laps li {
+  padding: 8px;
+  margin-bottom: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scrollbar */
+#laps::-webkit-scrollbar {
+  width: 5px;
+}
+
+#laps::-webkit-scrollbar-thumb {
+  background: #00eaff;
+  border-radius: 10px;
+}
+
+
+
+@media (max-width: 480px) {
+  .author-name {
+    font-size: 1rem;
+    top: 12px;
+    right: 15px;
+    letter-spacing: 1px;
+  }
+}
+
