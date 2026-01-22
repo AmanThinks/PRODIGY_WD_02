@@ -23,6 +23,12 @@ Developed a fully functional stopwatch web application with start, pause, reset,
 - UI/UX enhancement using CSS animations
 
 ## 🔹 Live Preview
+1.Clone the repo: git clone:- 
+
+## 🔹 Author
+Aman Gupta
+LinkedIn:-https://www.linkedin.com/in/aman-gupta-9553073a2
+GitHub:-https://github.com/AmanThinks
 
 ---
 
