@@ -23,7 +23,7 @@ Developed a fully functional stopwatch web application with start, pause, reset,
 - UI/UX enhancement using CSS animations
 
 ## 🔹 Live Preview
-1.Clone the repo: git clone:- 
+Clone the repo: git clone:- https://amanthinks.github.io/PRODIGY_WD_02/
 
 ## 🔹 Author
 Aman Gupta
